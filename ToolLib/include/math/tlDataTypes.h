@@ -1,8 +1,8 @@
 #ifndef intTypes
 #define intTypes
 
-#define lambda(return_type, args, body) \
-	({return_type __fn__ args body __fn__; })
+#define lambda(return_type, args, body)                                        \
+  ({ return_type __fn__ args body __fn__; })
 
 // just for lambdas only
 #define RETURN return;
@@ -18,15 +18,12 @@ typedef signed char int8_t;
 #endif
 
 #ifndef NULL
-#define NULL ((void*)0)
+#define NULL ((void *)0)
 #endif
 
 #ifndef enumTypes
 #define enumTypes
-typedef enum {
-  FALSE = 0,
-  TRUE = 1
-} tlBool;
+typedef enum { FALSE = 0, TRUE = 1 } tlBool;
 
 #define __bool_true_false_are_defined 1
 
